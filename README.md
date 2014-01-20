@@ -25,6 +25,8 @@ see: https://idobata.io
 - message_template
  - You can use erb notation
  - send message to idobata
+- (optional)post_interval
+ - Internal of post to idobata
 
 #### example
 
@@ -43,3 +45,4 @@ send 'field1 is 300 !' message to your idobata room
 ## releases
 
 - 2013/10/09 0.0.0 1st release
+- 2014/01/21 0.0.1 Support post interval

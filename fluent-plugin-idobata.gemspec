@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-idobata"
-  spec.version       = '0.0.0'
+  spec.version       = '0.0.1'
   spec.authors       = ["bash0C7"]
   spec.email         = ["koshiba+github@4038nullpointer.com"]
   spec.description   = "Fluentd output plugin to send data to idobata"

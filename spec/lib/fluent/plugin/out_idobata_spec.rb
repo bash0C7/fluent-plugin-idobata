@@ -25,12 +25,17 @@ describe do
   end
   
   describe 'emit' do
-    let(:record) {{ 'field1' => 50, 'otherfield' => 99}}
+    let(:record1) {{ 'field1' => 50, 'otherfield' => 99}}
+    let(:record2) {{ 'field1' => 150, 'otherfield' => 199}}
     let(:time) {0}
     let(:posted) {
       d = driver
+
       mock(HTTParty).post('https://idobata/web_hook/url', :body => 'body=field1 value: 50')
-      d.emit(record, Time.at(time))
+      mock(HTTParty).post('https://idobata/web_hook/url', :body => 'body=field1 value: 150')
+
+      d.emit(record1, Time.at(time))
+      d.emit(record2, Time.at(time))
       d.run
     }
 
@@ -39,6 +44,7 @@ describe do
         %[
       webhook_url         https://idobata/web_hook/url
       message_template    field1 value: <%= record["field1"] %>
+      post_interval       0
         ]
       }
 
