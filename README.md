@@ -26,7 +26,7 @@ see: https://idobata.io
  - You can use erb notation
  - send message to idobata
 - (optional)post_interval
- - Internal of post to idobata
+ - Interval of post to idobata
 
 #### example
 
