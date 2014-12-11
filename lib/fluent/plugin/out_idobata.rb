@@ -1,6 +1,7 @@
 require 'httparty'
 require 'erb'
 require 'ostruct'
+require 'cgi'
 
 module Fluent
   class Fluent::IdobataOutput < Fluent::Output
@@ -58,7 +59,7 @@ module Fluent
         record = param.record
         
         begin
-          HTTParty.post(@webhook_url, :body => "body=#{@erb.result(binding)}")
+          HTTParty.post(@webhook_url, :body => "body=#{CGI.escape(@erb.result(binding))}")
           sleep(@post_interval)
         rescue
           $log.warn "raises exception: #{$!.class}, '#{$!.message}, #{param}'"
