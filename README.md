@@ -1,4 +1,4 @@
-# fluent-plugin-idobata
+# fluent-plugin-idobata, a plugin for [Fluentd](http://fluentd.org)
 
 ## Output
 
