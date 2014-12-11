@@ -46,3 +46,5 @@ send 'field1 is 300 !' message to your idobata room
 
 - 2013/10/09 0.0.0 1st release
 - 2014/01/21 0.0.1 Support post interval
+- 2014/08/16 0.0.2 Modify Typo
+- 2014/12/12 0.0.3 escape body & Fix Readme
